@@ -7,12 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A93B9881B337DFC00DB4148 /* EmojiLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A93B9871B337DFC00DB4148 /* EmojiLoader.swift */; };
+		6A93B98A1B33812600DB4148 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9891B33812600DB4148 /* AudioToolbox.framework */; };
+		6A93B98C1B33812F00DB4148 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B98B1B33812F00DB4148 /* CFNetwork.framework */; };
+		6A93B98E1B33813600DB4148 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B98D1B33813600DB4148 /* CoreGraphics.framework */; };
+		6A93B9901B33813D00DB4148 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B98F1B33813D00DB4148 /* CoreLocation.framework */; };
+		6A93B9921B33814600DB4148 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9911B33814600DB4148 /* MobileCoreServices.framework */; };
+		6A93B9941B33815200DB4148 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9931B33815200DB4148 /* QuartzCore.framework */; };
+		6A93B9961B33815A00DB4148 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9951B33815A00DB4148 /* Security.framework */; };
+		6A93B9981B33815F00DB4148 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9971B33815F00DB4148 /* StoreKit.framework */; };
+		6A93B99A1B33816500DB4148 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9991B33816500DB4148 /* SystemConfiguration.framework */; };
+		6A93B99C1B33816B00DB4148 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B99B1B33816B00DB4148 /* libz.dylib */; };
+		6A93B99E1B33817200DB4148 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B99D1B33817200DB4148 /* libsqlite3.dylib */; };
+		6A93B9A01B33817900DB4148 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B99F1B33817900DB4148 /* Accounts.framework */; };
+		6A93B9A21B33817E00DB4148 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9A11B33817E00DB4148 /* Social.framework */; };
+		6A93B9B61B3385CA00DB4148 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9B51B3385CA00DB4148 /* Parse.framework */; };
+		6A93B9B71B3385CA00DB4148 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9B51B3385CA00DB4148 /* Parse.framework */; };
+		6A93B9B81B3385F500DB4148 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B99F1B33817900DB4148 /* Accounts.framework */; };
+		6A93B9B91B3385F500DB4148 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9891B33812600DB4148 /* AudioToolbox.framework */; };
+		6A93B9BA1B33862C00DB4148 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B98B1B33812F00DB4148 /* CFNetwork.framework */; };
+		6A93B9BB1B33862C00DB4148 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B98D1B33813600DB4148 /* CoreGraphics.framework */; };
+		6A93B9BC1B33862C00DB4148 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B98F1B33813D00DB4148 /* CoreLocation.framework */; };
+		6A93B9BD1B33862C00DB4148 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9911B33814600DB4148 /* MobileCoreServices.framework */; };
+		6A93B9BE1B33862C00DB4148 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9931B33815200DB4148 /* QuartzCore.framework */; };
+		6A93B9BF1B33862C00DB4148 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9951B33815A00DB4148 /* Security.framework */; };
+		6A93B9C01B33862C00DB4148 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9A11B33817E00DB4148 /* Social.framework */; };
+		6A93B9C11B33862C00DB4148 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9971B33815F00DB4148 /* StoreKit.framework */; };
+		6A93B9C21B33862C00DB4148 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9991B33816500DB4148 /* SystemConfiguration.framework */; };
+		6A93B9C31B33863200DB4148 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B99B1B33816B00DB4148 /* libz.dylib */; };
+		6A93B9C41B33863A00DB4148 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B99D1B33817200DB4148 /* libsqlite3.dylib */; };
+		6AE5445B1B338A34007301A0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5445A1B338A34007301A0 /* Bolts.framework */; };
+		6AE5445C1B338A34007301A0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5445A1B338A34007301A0 /* Bolts.framework */; };
 		6AF2E87A1B31E6A5003ACC5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2E8791B31E6A5003ACC5C /* AppDelegate.swift */; };
 		6AF2E87C1B31E6A5003ACC5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2E87B1B31E6A5003ACC5C /* ViewController.swift */; };
 		6AF2E87F1B31E6A5003ACC5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF2E87D1B31E6A5003ACC5C /* Main.storyboard */; };
 		6AF2E8811B31E6A5003ACC5C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AF2E8801B31E6A5003ACC5C /* Images.xcassets */; };
 		6AF2E8841B31E6A5003ACC5C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AF2E8821B31E6A5003ACC5C /* LaunchScreen.xib */; };
 		6AF2E8901B31E6A5003ACC5C /* EmojiBlastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2E88F1B31E6A5003ACC5C /* EmojiBlastTests.swift */; };
+		6AF2E8A21B31E6E8003ACC5C /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2E8A11B31E6E8003ACC5C /* KeyboardViewController.swift */; };
+		6AF2E8A51B31E6E8003ACC5C /* Emoji Blast.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6AF2E89D1B31E6E8003ACC5C /* Emoji Blast.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,9 +56,46 @@
 			remoteGlobalIDString = 6AF2E8731B31E6A5003ACC5C;
 			remoteInfo = EmojiBlast;
 		};
+		6AF2E8A31B31E6E8003ACC5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AF2E86C1B31E6A5003ACC5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AF2E89C1B31E6E8003ACC5C;
+			remoteInfo = "Emoji Blast";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6AF2E8A91B31E6E8003ACC5C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6AF2E8A51B31E6E8003ACC5C /* Emoji Blast.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6A93B9871B337DFC00DB4148 /* EmojiLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiLoader.swift; sourceTree = "<group>"; };
+		6A93B9891B33812600DB4148 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6A93B98B1B33812F00DB4148 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6A93B98D1B33813600DB4148 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6A93B98F1B33813D00DB4148 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6A93B9911B33814600DB4148 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6A93B9931B33815200DB4148 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6A93B9951B33815A00DB4148 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6A93B9971B33815F00DB4148 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6A93B9991B33816500DB4148 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6A93B99B1B33816B00DB4148 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6A93B99D1B33817200DB4148 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6A93B99F1B33817900DB4148 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		6A93B9A11B33817E00DB4148 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6A93B9B51B3385CA00DB4148 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		6AE5445A1B338A34007301A0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		6AF2E8741B31E6A5003ACC5C /* EmojiBlast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiBlast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF2E8781B31E6A5003ACC5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AF2E8791B31E6A5003ACC5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +106,9 @@
 		6AF2E8891B31E6A5003ACC5C /* EmojiBlastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojiBlastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF2E88E1B31E6A5003ACC5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AF2E88F1B31E6A5003ACC5C /* EmojiBlastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiBlastTests.swift; sourceTree = "<group>"; };
+		6AF2E89D1B31E6E8003ACC5C /* Emoji Blast.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Emoji Blast.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AF2E8A01B31E6E8003ACC5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AF2E8A11B31E6E8003ACC5C /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +116,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AE5445B1B338A34007301A0 /* Bolts.framework in Frameworks */,
+				6A93B9A21B33817E00DB4148 /* Social.framework in Frameworks */,
+				6A93B9A01B33817900DB4148 /* Accounts.framework in Frameworks */,
+				6A93B99E1B33817200DB4148 /* libsqlite3.dylib in Frameworks */,
+				6A93B99C1B33816B00DB4148 /* libz.dylib in Frameworks */,
+				6A93B99A1B33816500DB4148 /* SystemConfiguration.framework in Frameworks */,
+				6A93B9981B33815F00DB4148 /* StoreKit.framework in Frameworks */,
+				6A93B9961B33815A00DB4148 /* Security.framework in Frameworks */,
+				6A93B9941B33815200DB4148 /* QuartzCore.framework in Frameworks */,
+				6A93B9921B33814600DB4148 /* MobileCoreServices.framework in Frameworks */,
+				6A93B9901B33813D00DB4148 /* CoreLocation.framework in Frameworks */,
+				6A93B9B61B3385CA00DB4148 /* Parse.framework in Frameworks */,
+				6A93B98E1B33813600DB4148 /* CoreGraphics.framework in Frameworks */,
+				6A93B98C1B33812F00DB4148 /* CFNetwork.framework in Frameworks */,
+				6A93B98A1B33812600DB4148 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,15 +141,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6AF2E89A1B31E6E8003ACC5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE5445C1B338A34007301A0 /* Bolts.framework in Frameworks */,
+				6A93B9C41B33863A00DB4148 /* libsqlite3.dylib in Frameworks */,
+				6A93B9C31B33863200DB4148 /* libz.dylib in Frameworks */,
+				6A93B9BA1B33862C00DB4148 /* CFNetwork.framework in Frameworks */,
+				6A93B9BB1B33862C00DB4148 /* CoreGraphics.framework in Frameworks */,
+				6A93B9BC1B33862C00DB4148 /* CoreLocation.framework in Frameworks */,
+				6A93B9BD1B33862C00DB4148 /* MobileCoreServices.framework in Frameworks */,
+				6A93B9BE1B33862C00DB4148 /* QuartzCore.framework in Frameworks */,
+				6A93B9BF1B33862C00DB4148 /* Security.framework in Frameworks */,
+				6A93B9C01B33862C00DB4148 /* Social.framework in Frameworks */,
+				6A93B9C11B33862C00DB4148 /* StoreKit.framework in Frameworks */,
+				6A93B9C21B33862C00DB4148 /* SystemConfiguration.framework in Frameworks */,
+				6A93B9B81B3385F500DB4148 /* Accounts.framework in Frameworks */,
+				6A93B9B91B3385F500DB4148 /* AudioToolbox.framework in Frameworks */,
+				6A93B9B71B3385CA00DB4148 /* Parse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43B6DFF4B684866D3B78F820 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AE5445A1B338A34007301A0 /* Bolts.framework */,
+				6A93B9B51B3385CA00DB4148 /* Parse.framework */,
+				6A93B9A11B33817E00DB4148 /* Social.framework */,
+				6A93B99F1B33817900DB4148 /* Accounts.framework */,
+				6A93B99D1B33817200DB4148 /* libsqlite3.dylib */,
+				6A93B99B1B33816B00DB4148 /* libz.dylib */,
+				6A93B9991B33816500DB4148 /* SystemConfiguration.framework */,
+				6A93B9971B33815F00DB4148 /* StoreKit.framework */,
+				6A93B9951B33815A00DB4148 /* Security.framework */,
+				6A93B9931B33815200DB4148 /* QuartzCore.framework */,
+				6A93B9911B33814600DB4148 /* MobileCoreServices.framework */,
+				6A93B98F1B33813D00DB4148 /* CoreLocation.framework */,
+				6A93B98D1B33813600DB4148 /* CoreGraphics.framework */,
+				6A93B98B1B33812F00DB4148 /* CFNetwork.framework */,
+				6A93B9891B33812600DB4148 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6AF2E86B1B31E6A5003ACC5C = {
 			isa = PBXGroup;
 			children = (
 				6AF2E8761B31E6A5003ACC5C /* EmojiBlast */,
 				6AF2E88C1B31E6A5003ACC5C /* EmojiBlastTests */,
+				6AF2E89E1B31E6E8003ACC5C /* Emoji Blast */,
 				6AF2E8751B31E6A5003ACC5C /* Products */,
+				43B6DFF4B684866D3B78F820 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +204,7 @@
 			children = (
 				6AF2E8741B31E6A5003ACC5C /* EmojiBlast.app */,
 				6AF2E8891B31E6A5003ACC5C /* EmojiBlastTests.xctest */,
+				6AF2E89D1B31E6E8003ACC5C /* Emoji Blast.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +247,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6AF2E89E1B31E6E8003ACC5C /* Emoji Blast */ = {
+			isa = PBXGroup;
+			children = (
+				6AF2E8A11B31E6E8003ACC5C /* KeyboardViewController.swift */,
+				6AF2E89F1B31E6E8003ACC5C /* Supporting Files */,
+				6A93B9871B337DFC00DB4148 /* EmojiLoader.swift */,
+			);
+			path = "Emoji Blast";
+			sourceTree = "<group>";
+		};
+		6AF2E89F1B31E6E8003ACC5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AF2E8A01B31E6E8003ACC5C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +275,12 @@
 				6AF2E8701B31E6A5003ACC5C /* Sources */,
 				6AF2E8711B31E6A5003ACC5C /* Frameworks */,
 				6AF2E8721B31E6A5003ACC5C /* Resources */,
+				6AF2E8A91B31E6E8003ACC5C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6AF2E8A41B31E6E8003ACC5C /* PBXTargetDependency */,
 			);
 			name = EmojiBlast;
 			productName = EmojiBlast;
@@ -150,6 +305,23 @@
 			productReference = 6AF2E8891B31E6A5003ACC5C /* EmojiBlastTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		6AF2E89C1B31E6E8003ACC5C /* Emoji Blast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AF2E8A61B31E6E8003ACC5C /* Build configuration list for PBXNativeTarget "Emoji Blast" */;
+			buildPhases = (
+				6AF2E8991B31E6E8003ACC5C /* Sources */,
+				6AF2E89A1B31E6E8003ACC5C /* Frameworks */,
+				6AF2E89B1B31E6E8003ACC5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Emoji Blast";
+			productName = "Emoji Blast";
+			productReference = 6AF2E89D1B31E6E8003ACC5C /* Emoji Blast.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +337,9 @@
 					6AF2E8881B31E6A5003ACC5C = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = 6AF2E8731B31E6A5003ACC5C;
+					};
+					6AF2E89C1B31E6E8003ACC5C = {
+						CreatedOnToolsVersion = 6.3.2;
 					};
 				};
 			};
@@ -183,6 +358,7 @@
 			targets = (
 				6AF2E8731B31E6A5003ACC5C /* EmojiBlast */,
 				6AF2E8881B31E6A5003ACC5C /* EmojiBlastTests */,
+				6AF2E89C1B31E6E8003ACC5C /* Emoji Blast */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +375,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6AF2E8871B31E6A5003ACC5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AF2E89B1B31E6E8003ACC5C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,6 +408,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6AF2E8991B31E6E8003ACC5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AF2E8A21B31E6E8003ACC5C /* KeyboardViewController.swift in Sources */,
+				6A93B9881B337DFC00DB4148 /* EmojiLoader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +424,11 @@
 			isa = PBXTargetDependency;
 			target = 6AF2E8731B31E6A5003ACC5C /* EmojiBlast */;
 			targetProxy = 6AF2E88A1B31E6A5003ACC5C /* PBXContainerItemProxy */;
+		};
+		6AF2E8A41B31E6E8003ACC5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AF2E89C1B31E6E8003ACC5C /* Emoji Blast */;
+			targetProxy = 6AF2E8A31B31E6E8003ACC5C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -340,6 +537,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EmojiBlast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +551,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EmojiBlast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -390,6 +595,38 @@
 			};
 			name = Release;
 		};
+		6AF2E8A71B31E6E8003ACC5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Emoji Blast/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6AF2E8A81B31E6E8003ACC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Emoji Blast/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -409,6 +646,7 @@
 				6AF2E8951B31E6A5003ACC5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AF2E8961B31E6A5003ACC5C /* Build configuration list for PBXNativeTarget "EmojiBlastTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +655,16 @@
 				6AF2E8981B31E6A5003ACC5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AF2E8A61B31E6E8003ACC5C /* Build configuration list for PBXNativeTarget "Emoji Blast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AF2E8A71B31E6E8003ACC5C /* Debug */,
+				6AF2E8A81B31E6E8003ACC5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
