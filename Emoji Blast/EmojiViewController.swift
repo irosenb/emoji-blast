@@ -19,6 +19,8 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         self.view = UIView(frame: UIScreen.mainScreen().bounds)
         let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = UICollectionViewScrollDirection.Vertical
+        layout.minimumLineSpacing = 10000
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
