@@ -18,9 +18,15 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate, UICollect
         println(emojis)
         
         self.view = UIView(frame: UIScreen.mainScreen().bounds)
-        let layout = UICollectionViewLayout()
+        let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
+        collectionView.registerClass(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "Cell")
+        collectionView.backgroundColor = UIColor.blueColor()
+        
+        self.view.addSubview(collectionView)
         // Do any additional setup after loading the view.
     }
     
