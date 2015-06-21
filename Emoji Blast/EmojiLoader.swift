@@ -10,14 +10,14 @@ import Foundation
 import Parse
 
 class Emoji {
-    class func load() {
+    class func load() -> [PFObject] {
         var query: PFQuery = PFQuery(className: "Pack")
-        query.findObjects()
-        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-            if (error == nil) {
-                println(objects)
-//                return objects
-            }
-        }
+        return query.findObjects(nil) as! [PFObject]
+//        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+//            if (error == nil) {
+//                println(objects)
+////                return objects
+//            }
+//        }
     }
 }
