@@ -30,9 +30,9 @@ class KeyboardViewController: UIInputViewController {
             clientKey: "flQwsRmH6TfEjSNjz14TK1JkPaDEOPs2pmNbZv3T")
         
 //        loadEmojis()
-        
+//        Emoji.load()
+        addCollection()
         self.nextKeyboardButton = UIButton.buttonWithType(.System) as! UIButton
-    
         self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
         self.nextKeyboardButton.sizeToFit()
         self.nextKeyboardButton.setTranslatesAutoresizingMaskIntoConstraints(false)
@@ -53,6 +53,11 @@ class KeyboardViewController: UIInputViewController {
     
     func addCollection() {
         
+        var collectionController = EmojiViewController()
+        self.addChildViewController(collectionController)
+        collectionController.didMoveToParentViewController(self)
+        collectionController.view.frame = CGRectMake(0, 0, self.view.frame.width, 100)
+        self.view.addSubview(collectionController.view)
     }
     
     func loadEmojis() {
