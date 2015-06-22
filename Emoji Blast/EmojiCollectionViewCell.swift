@@ -20,6 +20,7 @@ class EmojiCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         emojiLabel = UITextView(frame: self.bounds)
+        emojiLabel.contentMode = UIViewContentMode.ScaleAspectFill
         emojiLabel.font = UIFont.systemFontOfSize(100)
         emojiLabel.backgroundColor = UIColor.clearColor()
         self.addSubview(emojiLabel)
