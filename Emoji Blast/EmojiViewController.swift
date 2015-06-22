@@ -42,7 +42,6 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate, UICollect
         var item = emojis[indexPath.item]
         cell.title = item["title"] as! String
         cell.text = item["text"] as! String
-        cell.emojiLabel.text = cell.title
         cell.frame.size = CGSizeMake(100, 100)
         cell.emojiLabel.frame = cell.bounds
         return cell

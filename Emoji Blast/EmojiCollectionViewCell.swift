@@ -9,9 +9,14 @@
 import UIKit
 
 class EmojiCollectionViewCell: UICollectionViewCell {
-    var title: String!
     var text: String!
     var emojiLabel: UITextView!
+    var title: String! {
+        didSet {
+            emojiLabel.text = title 
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         emojiLabel = UITextView(frame: self.bounds)
