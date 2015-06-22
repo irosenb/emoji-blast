@@ -25,8 +25,8 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        collectionView.registerClass(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "Cell")
-        collectionView.backgroundColor = UIColor.blueColor()
+        collectionView.registerClass(EmojiCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "Cell")
+        collectionView.backgroundColor = UIColor.clearColor()
         
         self.view.addSubview(collectionView)
         // Do any additional setup after loading the view.
@@ -38,13 +38,18 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! UICollectionViewCell
-        cell.backgroundColor = UIColor.blackColor()
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! EmojiCollectionViewCell
+        var item = emojis[indexPath.item]
+        cell.title = item["title"] as! String
+        cell.text = item["text"] as! String
+        cell.emojiLabel.text = cell.title
+        cell.frame.size = CGSizeMake(100, 100)
+        cell.emojiLabel.frame = cell.bounds
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return emojis.count
     }
 
     /*

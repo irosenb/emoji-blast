@@ -36,6 +36,7 @@
 		6A93B9C21B33862C00DB4148 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B9991B33816500DB4148 /* SystemConfiguration.framework */; };
 		6A93B9C31B33863200DB4148 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B99B1B33816B00DB4148 /* libz.dylib */; };
 		6A93B9C41B33863A00DB4148 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93B99D1B33817200DB4148 /* libsqlite3.dylib */; };
+		6AD91E851B3780A600551C5D /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD91E841B3780A600551C5D /* EmojiCollectionViewCell.swift */; };
 		6AE5445B1B338A34007301A0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5445A1B338A34007301A0 /* Bolts.framework */; };
 		6AE5445C1B338A34007301A0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5445A1B338A34007301A0 /* Bolts.framework */; };
 		6AE544671B368961007301A0 /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE544661B368961007301A0 /* EmojiViewController.swift */; };
@@ -96,6 +97,7 @@
 		6A93B99F1B33817900DB4148 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		6A93B9A11B33817E00DB4148 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6A93B9B51B3385CA00DB4148 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		6AD91E841B3780A600551C5D /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
 		6AE5445A1B338A34007301A0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		6AE544661B368961007301A0 /* EmojiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
 		6AF2E8741B31E6A5003ACC5C /* EmojiBlast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiBlast.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +258,7 @@
 				6AF2E89F1B31E6E8003ACC5C /* Supporting Files */,
 				6A93B9871B337DFC00DB4148 /* EmojiLoader.swift */,
 				6AE544661B368961007301A0 /* EmojiViewController.swift */,
+				6AD91E841B3780A600551C5D /* EmojiCollectionViewCell.swift */,
 			);
 			path = "Emoji Blast";
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				6AE544671B368961007301A0 /* EmojiViewController.swift in Sources */,
 				6AF2E8A21B31E6E8003ACC5C /* KeyboardViewController.swift in Sources */,
 				6A93B9881B337DFC00DB4148 /* EmojiLoader.swift in Sources */,
+				6AD91E851B3780A600551C5D /* EmojiCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
