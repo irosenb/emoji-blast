@@ -46,9 +46,9 @@ class KeyboardViewController: UIInputViewController {
         self.view.addConstraints([nextKeyboardButtonLeftSideConstraint, nextKeyboardButtonBottomConstraint])
     }
     
-    func blastEmojis(sender: AnyObject) {
+    func blastEmojis(text: String) {
         var proxy = textDocumentProxy as! UITextDocumentProxy
-        proxy.insertText("😂😁😄😊😊😄😃😝😃😂")
+        proxy.insertText(text)
     }
     
     func addCollection() {
