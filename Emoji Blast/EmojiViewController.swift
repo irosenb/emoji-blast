@@ -50,6 +50,11 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return emojis.count
     }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        println("HI")
+        KeyboardViewController().blastEmojis(emojis[indexPath.item]["text"] as! String)
+    }
 
     /*
     // MARK: - Navigation
