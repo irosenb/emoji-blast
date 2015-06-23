@@ -25,9 +25,10 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        collectionView.registerClass(EmojiCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "Cell")
+        collectionView.registerClass(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         collectionView.backgroundColor = UIColor.clearColor()
         collectionView.userInteractionEnabled = true
+//        self.view = collectionView
         self.view.addSubview(collectionView)
         collectionView.reloadData()
         // Do any additional setup after loading the view.
