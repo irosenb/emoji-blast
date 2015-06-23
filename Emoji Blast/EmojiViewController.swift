@@ -27,8 +27,9 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         collectionView.registerClass(EmojiCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "Cell")
         collectionView.backgroundColor = UIColor.clearColor()
-        
+        collectionView.userInteractionEnabled = true
         self.view.addSubview(collectionView)
+        collectionView.reloadData()
         // Do any additional setup after loading the view.
     }
     
@@ -42,8 +43,6 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate, UICollect
         var item = emojis[indexPath.item]
         cell.title = item["title"] as! String
         cell.text = item["text"] as! String
-        cell.frame.size = CGSizeMake(100, 100)
-        cell.emojiLabel.frame = cell.bounds
         return cell
     }
     
@@ -51,9 +50,20 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate, UICollect
         return emojis.count
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 40
+        
+    }
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        // This isn't working. Figure out why 😒
         println("HI")
         KeyboardViewController().blastEmojis(emojis[indexPath.item]["text"] as! String)
+    }
+    
+    func writeEmoji(recog: UITapGestureRecognizer) {
+//        let point = recog.locationInView(self.view)
+//        KeyboardViewController().blastEmojis(emojis[indexPath.item]["text"] as! String)
     }
 
     /*

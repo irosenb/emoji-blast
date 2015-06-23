@@ -13,19 +13,29 @@ class EmojiCollectionViewCell: UICollectionViewCell {
     var emojiLabel: UITextView!
     var title: String! {
         didSet {
-            emojiLabel.text = title 
+            emojiLabel.text = title
         }
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.frame.size = CGSizeMake(100, 100)
+        
         emojiLabel = UITextView(frame: self.bounds)
         emojiLabel.contentMode = UIViewContentMode.ScaleAspectFill
         emojiLabel.font = UIFont.systemFontOfSize(100)
         emojiLabel.backgroundColor = UIColor.clearColor()
+        emojiLabel.userInteractionEnabled = false
+        emojiLabel.selectable = false
+        emojiLabel.frame = self.bounds
+        
         self.addSubview(emojiLabel)
     }
-
+    
+    func writeEmoji() {
+        
+    }
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
