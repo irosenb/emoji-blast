@@ -29,8 +29,6 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
         Parse.setApplicationId("L1V2i5LD9uTe8gEi0uo0Ty7ZkEISbZDCYOvLOXjn",
             clientKey: "flQwsRmH6TfEjSNjz14TK1JkPaDEOPs2pmNbZv3T")
         
-//        loadEmojis()
-//        Emoji.load()
         addCollection()
         self.nextKeyboardButton = UIButton.buttonWithType(.System) as! UIButton
         self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
