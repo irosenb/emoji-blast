@@ -10,20 +10,20 @@ import UIKit
 import Parse
 import Bolts
 
-class KeyboardViewController: UIInputViewController {
+class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
 
     @IBOutlet var nextKeyboardButton: UIButton!
     var emojiButton: UIButton!
-
+    
     override func updateViewConstraints() {
         super.updateViewConstraints()
-    
+        
         // Add custom view sizing constraints here
     }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Parse.enableLocalDatastore()
         
         // Initialize Parse.
         Parse.setApplicationId("L1V2i5LD9uTe8gEi0uo0Ty7ZkEISbZDCYOvLOXjn",
@@ -51,13 +51,23 @@ class KeyboardViewController: UIInputViewController {
         proxy.insertText(text)
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        // This isn't working. Figure out why 😒
+        println("HI")
+        var proxy = textDocumentProxy as! UITextDocumentProxy
+        var cell = collectionView.cellForItemAtIndexPath(indexPath) as! EmojiCollectionViewCell
+        proxy.insertText(cell.text)
+    }
+    
     func addCollection() {
         
         var collectionController = EmojiViewController()
         self.addChildViewController(collectionController)
-        collectionController.didMoveToParentViewController(self)
-        collectionController.view.frame = CGRectMake(0, 0, self.view.frame.width, 100)
+        collectionController.view.frame = UIScreen.mainScreen().bounds
+        println(collectionController.collectionView.frame)
+        collectionController.collectionView.delegate = self
         self.view.addSubview(collectionController.view)
+        collectionController.didMoveToParentViewController(self)
     }
     
     func loadEmojis() {
@@ -67,7 +77,6 @@ class KeyboardViewController: UIInputViewController {
         emojiButton.sizeToFit()
         emojiButton.addTarget(self, action: "blastEmojis:", forControlEvents: UIControlEvents.TouchUpInside)
         self.inputView.addSubview(emojiButton)
-        
         
         var sadButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         sadButton.setTitle("😩", forState: UIControlState.Normal)
