@@ -14,6 +14,7 @@ class EmojiCollectionViewCell: UICollectionViewCell {
     var title: String! {
         didSet {
             emojiLabel.text = title
+            emojiLabel.sizeToFit()
         }
     }
 
@@ -21,21 +22,16 @@ class EmojiCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         self.frame.size = CGSizeMake(100, 100)
         emojiLabel = UITextView(frame: self.frame)
-        emojiLabel.center = contentView.convertPoint(contentView.center, fromView: contentView.superview)
-        emojiLabel.contentMode = UIViewContentMode.ScaleAspectFill
         emojiLabel.font = UIFont.systemFontOfSize(100)
         emojiLabel.backgroundColor = UIColor.clearColor()
         emojiLabel.userInteractionEnabled = false
         emojiLabel.selectable = false
         emojiLabel.frame = self.bounds
+        emojiLabel.textAlignment = NSTextAlignment.Center
         self.contentView.addSubview(emojiLabel)
-        self.contentView.backgroundColor = UIColor.blueColor()
+        self.contentView.backgroundColor = UIColor.clearColor()
     }
-    
-    func writeEmoji() {
-        
-    }
-    
+
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
