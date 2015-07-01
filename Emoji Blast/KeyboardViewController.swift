@@ -14,6 +14,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
 
     @IBOutlet var nextKeyboardButton: UIButton!
     var emojiButton: UIButton!
+    var deleteButton: UIButton!
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -21,6 +22,12 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
         // Add custom view sizing constraints here
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(false)
+        addCollection()
+        self.view.bringSubviewToFront(nextKeyboardButton)
+        self.view.bringSubviewToFront(deleteButton)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,43 +36,60 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
         Parse.setApplicationId("L1V2i5LD9uTe8gEi0uo0Ty7ZkEISbZDCYOvLOXjn",
             clientKey: "flQwsRmH6TfEjSNjz14TK1JkPaDEOPs2pmNbZv3T")
         
-        addCollection()
         self.nextKeyboardButton = UIButton.buttonWithType(.System) as! UIButton
         self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
         self.nextKeyboardButton.sizeToFit()
         self.nextKeyboardButton.setTranslatesAutoresizingMaskIntoConstraints(false)
     
         self.nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
-        
+
         self.view.addSubview(self.nextKeyboardButton)
-    
+
+        deleteButton = UIButton.buttonWithType(.System) as! UIButton
+        deleteButton.setTitle("Delete", forState: .Normal)
+        deleteButton.sizeToFit()
+        deleteButton.setTranslatesAutoresizingMaskIntoConstraints(false)
+        deleteButton.addTarget(self, action: "deleteEmojis", forControlEvents: .TouchUpInside)
+        self.view.addSubview(deleteButton)
         var nextKeyboardButtonLeftSideConstraint = NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0.0)
         var nextKeyboardButtonBottomConstraint = NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 0.0)
-        self.view.addConstraints([nextKeyboardButtonLeftSideConstraint, nextKeyboardButtonBottomConstraint])
+        var deleteKeyboardButtonBottomConstraint = NSLayoutConstraint(item: self.deleteButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 0.0)
+        var deleteButtonRightSideConstraint = NSLayoutConstraint(item: self.deleteButton, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: 0.0)
+
+        self.view.addConstraints([nextKeyboardButtonLeftSideConstraint, nextKeyboardButtonBottomConstraint, deleteButtonRightSideConstraint, deleteKeyboardButtonBottomConstraint])
+
     }
     
     func blastEmojis(text: String) {
         var proxy = textDocumentProxy as! UITextDocumentProxy
         proxy.insertText(text)
+        println(proxy.documentContextBeforeInput)
+    }
+    
+    func deleteEmojis() {
+        println("DELETE")
+        
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        // This isn't working. Figure out why 😒
-        println("HI")
-        var proxy = textDocumentProxy as! UITextDocumentProxy
         var cell = collectionView.cellForItemAtIndexPath(indexPath) as! EmojiCollectionViewCell
-        proxy.insertText(cell.text)
+        blastEmojis(cell.text)
     }
     
     func addCollection() {
-        
         var collectionController = EmojiViewController()
         self.addChildViewController(collectionController)
-        collectionController.view.frame = UIScreen.mainScreen().bounds
+        collectionController.didMoveToParentViewController(self)
+        
+        collectionController.view.frame = self.view.frame
         println(collectionController.collectionView.frame)
         collectionController.collectionView.delegate = self
+        
+        var constraint = NSLayoutConstraint(item: collectionController.collectionView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.nextKeyboardButton, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 1.0)
+//        collectionController.collectionView.addConstraint(constraint)
+        
         self.view.addSubview(collectionController.view)
-        collectionController.didMoveToParentViewController(self)
+        collectionController.collectionView.sizeToFit()
     }
     
     func loadEmojis() {
