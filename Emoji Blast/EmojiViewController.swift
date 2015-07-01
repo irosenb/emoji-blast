@@ -21,13 +21,15 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.view = UIView(frame: UIScreen.mainScreen().bounds)
         
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = UICollectionViewScrollDirection.Vertical
-        layout.minimumLineSpacing = 10000
+//        layout.scrollDirection = UICollectionViewScrollDirection.Vertical
+//        layout.minimumLineSpacing = 10000
         layout.itemSize = CGSizeMake(100, 100)
-
+        
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.dataSource = self        
         collectionView.registerClass(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.bounces = true
+        collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = UIColor.clearColor()
         collectionView.userInteractionEnabled = true
         self.view.addSubview(collectionView)
