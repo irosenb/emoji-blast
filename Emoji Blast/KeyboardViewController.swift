@@ -67,7 +67,15 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
     }
     
     func deleteEmojis() {
-        println("DELETE")
+//        println("DELETE")
+        var proxy = textDocumentProxy as! UITextDocumentProxy
+        if (proxy.documentContextBeforeInput != nil) {
+            var tokens = proxy.documentContextBeforeInput.componentsSeparatedByString(" ")
+            println(tokens.last)
+            for emoji in tokens.last as String! {
+                proxy.deleteBackward()
+            }
+        }
         
     }
     
@@ -82,15 +90,19 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
         collectionController.didMoveToParentViewController(self)
         
         collectionController.view.frame = self.view.frame
+
         println(collectionController.collectionView.frame)
         collectionController.collectionView.delegate = self
-        
-        var constraint = NSLayoutConstraint(item: collectionController.collectionView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.nextKeyboardButton, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 1.0)
-//        collectionController.collectionView.addConstraint(constraint)
-        
         self.view.addSubview(collectionController.view)
-        collectionController.collectionView.sizeToFit()
+        collectionController.collectionView.frame = collectionController.view.frame
+        var constraint = NSLayoutConstraint(item: collectionController.view, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.nextKeyboardButton, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 0.0)
+        var sideConstraint = NSLayoutConstraint(item: collectionController.view, attribute: NSLayoutAttribute.Right, relatedBy: .Equal, toItem: self.view, attribute: NSLayoutAttribute.Right, multiplier: 1.0, constant: 0.0)
+        
+        self.view.addConstraints([constraint])
+        println(collectionController.view.frame)
+        collectionController.view.sizeToFit()
     }
+    
     
     func loadEmojis() {
         emojiButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
