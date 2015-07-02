@@ -15,6 +15,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
     @IBOutlet var nextKeyboardButton: UIButton!
     var emojiButton: UIButton!
     var deleteButton: UIButton!
+    var animateLabel: UILabel!
+    var collectionController: EmojiViewController!
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -32,6 +34,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupAnimateLabel()
         // Initialize Parse.
         Parse.setApplicationId("L1V2i5LD9uTe8gEi0uo0Ty7ZkEISbZDCYOvLOXjn",
             clientKey: "flQwsRmH6TfEjSNjz14TK1JkPaDEOPs2pmNbZv3T")
@@ -60,6 +63,15 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
 
     }
     
+    func setupAnimateLabel() {
+        animateLabel = UILabel(frame: self.view.frame)
+        animateLabel.text = "💥"
+        animateLabel.font = UIFont.systemFontOfSize(50)
+        animateLabel.sizeToFit()
+        animateLabel.alpha = 0
+        self.view.addSubview(self.animateLabel)
+    }
+    
     func blastEmojis(text: String) {
         var proxy = textDocumentProxy as! UITextDocumentProxy
         proxy.insertText(text)
@@ -81,11 +93,24 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         var cell = collectionView.cellForItemAtIndexPath(indexPath) as! EmojiCollectionViewCell
+        blastEffect(cell)
         blastEmojis(cell.text)
     }
     
+    func blastEffect(cell: EmojiCollectionViewCell) {
+        var center = self.collectionController.collectionView.convertPoint(cell.center, toView: self.view)
+        animateLabel.center = center
+        self.view.bringSubviewToFront(animateLabel)
+        UIView.animateWithDuration(0.19, animations: { () -> Void in
+            self.animateLabel.alpha = 1
+            
+        }) { (finished) -> Void in
+            self.animateLabel.alpha = 0
+        }
+    }
+    
     func addCollection() {
-        var collectionController = EmojiViewController()
+        collectionController = EmojiViewController()
         self.addChildViewController(collectionController)
         collectionController.didMoveToParentViewController(self)
         
