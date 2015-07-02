@@ -16,22 +16,18 @@ class EmojiViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         emojis = Emoji.load()
-        println(emojis)
         
-        self.view = UIView(frame: UIScreen.mainScreen().bounds)
+        self.view = UIView(frame: CGRectZero)
         
         let layout = UICollectionViewFlowLayout()
-//        layout.scrollDirection = UICollectionViewScrollDirection.Vertical
-//        layout.minimumLineSpacing = 10000
         layout.itemSize = CGSizeMake(100, 100)
         
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.dataSource = self        
         collectionView.registerClass(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-        collectionView.bounces = true
-        collectionView.alwaysBounceVertical = true
         collectionView.backgroundColor = UIColor.clearColor()
-        collectionView.userInteractionEnabled = true
+
+        self.view.backgroundColor = UIColor.clearColor()
         self.view.addSubview(collectionView)
     }
     
