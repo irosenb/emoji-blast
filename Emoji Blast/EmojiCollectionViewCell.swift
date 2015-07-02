@@ -10,24 +10,24 @@ import UIKit
 
 class EmojiCollectionViewCell: UICollectionViewCell {
     var text: String!
-    var emojiLabel: UITextView!
+    var emojiLabel: UILabel!
     var title: String! {
         didSet {
             emojiLabel.text = title
             emojiLabel.sizeToFit()
+            emojiLabel.center = self.contentView.center
         }
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.frame.size = CGSizeMake(100, 100)
-        emojiLabel = UITextView(frame: self.frame)
-        emojiLabel.font = UIFont.systemFontOfSize(100)
+        emojiLabel = UILabel(frame: self.frame)
+        emojiLabel.font = UIFont.systemFontOfSize(90)
         emojiLabel.backgroundColor = UIColor.clearColor()
         emojiLabel.userInteractionEnabled = false
-        emojiLabel.selectable = false
         emojiLabel.frame = self.bounds
         emojiLabel.textAlignment = NSTextAlignment.Center
+
         self.contentView.addSubview(emojiLabel)
         self.contentView.backgroundColor = UIColor.clearColor()
     }
