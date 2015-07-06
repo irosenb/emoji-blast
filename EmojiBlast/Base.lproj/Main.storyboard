@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WWM-I2-YxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -110,7 +110,7 @@ to set some things straight first.</string>
         <!--Add Emoji View Controller-->
         <scene sceneID="6HB-8T-AhR">
             <objects>
-                <viewController id="WWM-I2-YxB" customClass="AddEmojiViewController" customModule="EmojiBlast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddEmoji" id="WWM-I2-YxB" customClass="AddEmojiViewController" customModule="EmojiBlast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MDF-Dn-ARg"/>
                         <viewControllerLayoutGuide type="bottom" id="8Q6-MF-8pE"/>
