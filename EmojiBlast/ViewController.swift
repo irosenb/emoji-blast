@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     func sendNotifications() {
         for (index, item) in enumerate(notifications) {
             let notification = UILocalNotification()
-            notification.fireDate = NSDate(timeIntervalSinceNow: 2.0 * Double(index + 1))
+            notification.fireDate = NSDate(timeIntervalSinceNow: 8.0 * Double(index + 1))
             notification.alertBody = item
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
         }
