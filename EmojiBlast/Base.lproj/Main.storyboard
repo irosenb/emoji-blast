@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WWM-I2-YxB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -106,6 +106,85 @@ to set some things straight first.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2j-0w-pI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1115" y="372"/>
+        </scene>
+        <!--Add Emoji View Controller-->
+        <scene sceneID="6HB-8T-AhR">
+            <objects>
+                <viewController id="WWM-I2-YxB" customClass="AddEmojiViewController" customModule="EmojiBlast" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MDF-Dn-ARg"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Q6-MF-8pE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mWq-k2-aea">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="😂😁😁😁😁🙉🙉🙉🙉" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Swg-BA-5CJ">
+                                <rect key="frame" x="16" y="165" width="568" height="299"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title 👍" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xBo-PM-dcZ">
+                                <rect key="frame" x="16" y="81" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zk7-Tm-c3b">
+                                <rect key="frame" x="167" y="523" width="267" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="267" id="aSK-k8-tMB"/>
+                                    <constraint firstAttribute="height" constant="57" id="jX5-7f-KFE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Submit 😘">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitEmojis:" destination="WWM-I2-YxB" eventType="touchUpInside" id="Gat-gH-igb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xBo-PM-dcZ" firstAttribute="trailing" secondItem="mWq-k2-aea" secondAttribute="trailingMargin" id="41h-s9-vyq"/>
+                            <constraint firstAttribute="centerX" secondItem="zk7-Tm-c3b" secondAttribute="centerX" constant="-0.5" id="4vx-7x-HJS"/>
+                            <constraint firstAttribute="centerX" secondItem="Swg-BA-5CJ" secondAttribute="centerX" id="6WN-QR-WZy"/>
+                            <constraint firstItem="8Q6-MF-8pE" firstAttribute="top" secondItem="zk7-Tm-c3b" secondAttribute="bottom" constant="20" id="7oa-5F-s8b"/>
+                            <constraint firstAttribute="centerY" secondItem="Swg-BA-5CJ" secondAttribute="centerY" constant="-14.5" id="9VH-mh-oDn"/>
+                            <constraint firstAttribute="centerY" secondItem="xBo-PM-dcZ" secondAttribute="centerY" constant="204" id="NVH-k4-uN3"/>
+                            <constraint firstItem="xBo-PM-dcZ" firstAttribute="leading" secondItem="mWq-k2-aea" secondAttribute="leadingMargin" id="TKL-SV-SyU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zk7-Tm-c3b" secondAttribute="trailing" constant="150" id="U28-fG-UjT"/>
+                            <constraint firstItem="zk7-Tm-c3b" firstAttribute="top" secondItem="MDF-Dn-ARg" secondAttribute="bottom" constant="503" id="UHK-ta-NiU"/>
+                            <constraint firstAttribute="centerX" secondItem="zk7-Tm-c3b" secondAttribute="centerX" constant="-0.5" id="WXc-yc-vdL"/>
+                            <constraint firstItem="zk7-Tm-c3b" firstAttribute="leading" secondItem="mWq-k2-aea" secondAttribute="leadingMargin" constant="151" id="b2x-Ig-Id2"/>
+                            <constraint firstItem="zk7-Tm-c3b" firstAttribute="leading" secondItem="mWq-k2-aea" secondAttribute="leadingMargin" constant="151" id="j0l-ZG-bAC"/>
+                            <constraint firstItem="Swg-BA-5CJ" firstAttribute="leading" secondItem="mWq-k2-aea" secondAttribute="leadingMargin" id="olM-FB-mHp"/>
+                            <constraint firstItem="zk7-Tm-c3b" firstAttribute="top" secondItem="MDF-Dn-ARg" secondAttribute="bottom" constant="503" id="pGh-SR-qqu"/>
+                            <constraint firstAttribute="centerY" secondItem="zk7-Tm-c3b" secondAttribute="centerY" constant="-251.5" id="pZ7-an-pc1"/>
+                            <constraint firstItem="Swg-BA-5CJ" firstAttribute="top" secondItem="MDF-Dn-ARg" secondAttribute="bottom" constant="145" id="qsA-ld-4rp"/>
+                            <constraint firstItem="8Q6-MF-8pE" firstAttribute="top" secondItem="zk7-Tm-c3b" secondAttribute="bottom" constant="20" id="wO0-nh-PQZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4vx-7x-HJS"/>
+                                <exclude reference="UHK-ta-NiU"/>
+                                <exclude reference="WXc-yc-vdL"/>
+                                <exclude reference="j0l-ZG-bAC"/>
+                                <exclude reference="pZ7-an-pc1"/>
+                                <exclude reference="wO0-nh-PQZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="emojiTextView" destination="Swg-BA-5CJ" id="xLv-Y8-frx"/>
+                        <outlet property="submittButton" destination="zk7-Tm-c3b" id="zbu-gP-jNG"/>
+                        <outlet property="titleView" destination="xBo-PM-dcZ" id="tqX-iT-IZS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jhO-oy-ihO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784" y="381"/>
         </scene>
     </scenes>
     <resources>
