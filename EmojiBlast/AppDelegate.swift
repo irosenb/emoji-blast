@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewControllerWithIdentifier("AddEmoji") as! AddEmojiViewController
             self.window?.rootViewController = controller
+            self.window?.makeKeyAndVisible()
             return true
         }
         opened = true
